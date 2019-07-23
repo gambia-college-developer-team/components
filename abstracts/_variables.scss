@@ -1,0 +1,24 @@
+$colors: (
+  'white': #fff,
+  'black': #000,
+);
+
+
+
+$baseline: 1.7 !default;
+
+
+/** 
+ * Z-index map
+ * @access private
+ * @type Map
+ * @prop {String} key :: z-index layer name
+ * @prop {Number} value :: z-index value mapped to the key
+ */
+$z-indexes: (
+  'modal': 500,
+  'dropdown': 400,
+  'nav': 300,
+  'default': 1,
+  'below': -1,
+);

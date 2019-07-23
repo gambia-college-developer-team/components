@@ -1,0 +1,47 @@
+/**
+ * Micro Clearfix :: Helper to clear inner floats
+ * @author Nicolas Gallagher
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+/**
+ * Helper to size an element
+ * @author Hugo Giraudel
+ * @param {Length} $height
+ * @param {Length} $width
+ */
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+
+/**
+ * Helper to flex and center items vertically
+ * @author Hugo A. Camarian
+ */
+@mixin flex-and-center-v {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/**
+ * Helper to flex and center items vertically & Horizontally
+ * @author Hugo A. Camarian
+ */
+@mixin flex-and-center-vh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

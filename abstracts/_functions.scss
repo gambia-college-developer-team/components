@@ -1,0 +1,35 @@
+
+/** 
+ * Get a z-index value from a layer name
+ * @access public
+ * @para {String} $layer :: z-index layer name
+ * @return {Number} 
+ * @require $z-indexes
+ */
+@function getZIndex($layer) {
+  @if map-has-key($z-indexes, $layer) {
+    @return map-get($z-indexes, $layer);
+  } @else {
+    @warn "The #{$layer}" is not in the map '$z-indexes';
+  }
+}
+
+
+
+
+/**
+ * Get color value from a color name
+ * @access public
+ * @para {String} $color :: color name
+ * @return {String} color value
+ * @require $colors
+ */
+
+@function getColor($color) {
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color);
+  } 
+
+  @warn "The #{$color} in not in the map $colors";
+  @return null;
+}
