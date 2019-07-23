@@ -1,0 +1,61 @@
+// Variables
+
+
+// Mixins
+// Placeholders
+// Functions
+
+
+.gc-navbar {
+  @include flex-and-center-v;
+
+  background-color: rgba(0,0,0, 0.5);
+}
+
+.gc-navs {
+  @include flex-and-center-v;
+  flex-direction: column;
+}
+
+.gc-nav {
+  @include flex-and-center-v;
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: getColor("white");
+    font-size: 14px;
+  }
+}
+
+.gc-primary-nav {
+  
+  order: 0;
+  &__item {
+    // display: block;
+    width: 50%;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    padding: 1.7rem 1rem;
+    text-align: center;
+    &:nth-child(odd) {
+      border-left: none;
+    }
+  }
+}
+
+.gc-secondary-nav {
+  order: 1;
+  &__item {
+    // display: block;
+    width: 33.3333%;
+    // border-left: 1px solid #ccc;
+    // border-bottom: 1px solid #ccc;
+
+    padding: 1.7rem 1rem;
+    text-align: center;
+    &:nth-child(even) {
+      border-left: none;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+/** 
+ * Z-index map
+ * @access private
+ * @type Map
+ * @prop {String} key :: z-index layer name
+ * @prop {Number} value :: z-index value mapped to the key
+ */
+/**
+ * Micro Clearfix :: Helper to clear inner floats
+ * @author Nicolas Gallagher
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+/**
+ * Helper to size an element
+ * @author Hugo Giraudel
+ * @param {Length} $height
+ * @param {Length} $width
+ */
+/**
+ * Helper to flex and center items vertically
+ * @author Hugo A. Camarian
+ */
+/**
+ * Helper to flex and center items vertically & Horizontally
+ * @author Hugo A. Camarian
+ */
+/** 
+ * Get a z-index value from a layer name
+ * @access public
+ * @para {String} $layer :: z-index layer name
+ * @return {Number} 
+ * @require $z-indexes
+ */
+/**
+ * Get color value from a color name
+ * @access public
+ * @para {String} $color :: color name
+ * @return {String} color value
+ * @require $colors
+ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.gc-logo {
+  margin-right: auto;
+}
+
+.gc-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gc-navs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gc-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gc-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+}
+
+.gc-primary-nav {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+
+.gc-primary-nav__item {
+  width: 50%;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1.7rem 1rem;
+  text-align: center;
+}
+
+.gc-primary-nav__item:nth-child(odd) {
+  border-left: none;
+}
+
+.gc-secondary-nav {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.gc-secondary-nav__item {
+  width: 33.3333%;
+  padding: 1.7rem 1rem;
+  text-align: center;
+}
+
+.gc-secondary-nav__item:nth-child(even) {
+  border-left: none;
+}
+/*# sourceMappingURL=style.css.map */
