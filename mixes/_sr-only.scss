@@ -1,0 +1,38 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+
+    &--focusable {
+        &:focus,
+        &:active {
+          position: static;
+          width: auto;
+          height: auto;
+          margin: 0;
+          overflow: visible;
+          clip: auto;
+      }
+    }
+
+}
+
+
+// take it to its own file - test and see
+.skip-to-main {
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 15px;
+  display: block;
+  background-color: #002B54;
+}
+
+/* 
+usage:
+<a class="sr-only sr-only-focusable skip-to-content" href="#main">Skip to main content</a>
+*/
