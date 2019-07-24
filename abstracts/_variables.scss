@@ -1,11 +1,14 @@
 $colors: (
-  'white': #fff,
-  'black': #000,
+  'w': #fff,
+  'b': #000,
+
+  'primary': #04093e,
 );
 
 
 
 $baseline: 1.7 !default;
+$vr: 1.7 * 1rem !default;
 
 
 /** 
