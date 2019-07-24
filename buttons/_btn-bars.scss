@@ -1,0 +1,49 @@
+.btn-bars {
+  display: inline-block;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+
+    &--menu-text {
+      text-transform: uppercase;
+      color: getColor(w);
+    }
+
+    &--btn {
+      background: none;
+      border: none;
+      appearance: none;
+      cursor: pointer;
+      padding: $vr/2;
+    
+      > span {
+          display: block;
+          width: $vr;
+          height: 3px;
+          transition: all 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
+          transform-origin: 100%;
+          background-color: getColor(w);
+
+          &:nth-child(2) {
+            margin: 5px 0;
+          }
+
+          &:nth-child(1) {
+            transform: scaleX(0.5);
+          }
+          &:nth-child(2) {
+            transform: scaleX(0.75);
+          }
+        }
+
+        &:hover {
+          span:nth-child(1),
+          span:nth-child(2) {
+            transform: scaleX(1);
+          }
+        }
+    }
+
+  }
+}
