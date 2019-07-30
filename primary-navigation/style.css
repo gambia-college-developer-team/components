@@ -1,3 +1,6 @@
+/**
+ * Breakpoint Graph map
+ */
 /** 
  * Z-index map
  * @access private
@@ -23,6 +26,9 @@
 /**
  * Helper to flex and center items vertically & Horizontally
  * @author Hugo A. Camarian
+ */
+/**
+ * 
  */
 /** 
  * Get a z-index value from a layer name
