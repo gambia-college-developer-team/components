@@ -1,0 +1,54 @@
+.featured {
+  @include respond(large) {
+    height: 100vh;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: 80vh;
+  transition: height 0.1s ease;
+
+  &__item {
+    padding: $vr;
+  }
+
+  &__title {
+   
+  }
+
+  &__excerpt {
+    font-size: 1.3rem;
+  }
+
+  &__title,
+  &__excerpt {
+    background-color: rgba(getColor(primary), 0.8);
+    display: inline-block;
+    margin: 0;
+    padding: $vr/2;
+     color: getColor(w);
+  }
+  
+  
+  // modifiers
+  &--bg {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+  }
+
+  &--img {
+    @include respond(large) {
+      background-image: 
+      linear-gradient(rgba(getColor(primary),  0.3)),
+      url(../../media/images/hero-0.jpg);
+    }
+
+    background-image: 
+      linear-gradient(rgba(getColor(primary),  0.3)),
+      url(../../media/images/hero-0-sm.jpg);
+  }
+}
+
