@@ -1,14 +1,28 @@
 $colors: (
   'w': #fff,
   'b': #000,
-
+  
   'primary': #04093e,
+  'mute': #666,
 );
 
 
-
 $baseline: 1.7 !default;
-$vr: 1.7 * 1rem !default;
+$vr: $baseline * 1rem !default;
+
+
+
+/**
+ * Breakpoint Graph map
+ */
+$bps: (
+  tiny:     320px,      
+  small:    800px,       
+  medium:   1024px,       
+  large: 	  1280px,       
+  larger: 	1440px,      
+  // largest: 	1440px       
+) !default;
 
 
 /** 

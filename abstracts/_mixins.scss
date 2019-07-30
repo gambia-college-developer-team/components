@@ -45,3 +45,17 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+
+/**
+ * 
+ */
+@mixin respond($bp) {
+  @if map-has-key($bps, $bp) {
+    @media(min-width: #{map-get($bps, $bp)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown `#{$bp}` in $bps, please check"
+  }
+}
