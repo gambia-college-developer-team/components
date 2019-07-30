@@ -1,3 +1,6 @@
+/**
+ * Breakpoint Graph map
+ */
 /** 
  * Z-index map
  * @access private
@@ -24,6 +27,9 @@
  * Helper to flex and center items vertically & Horizontally
  * @author Hugo A. Camarian
  */
+/**
+ * 
+ */
 /** 
  * Get a z-index value from a layer name
  * @access public
@@ -43,5 +49,61 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.7;
   font-size: 1rem;
+}
+
+.featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 80vh;
+  -webkit-transition: height 0.1s ease;
+  transition: height 0.1s ease;
+}
+
+@media (min-width: 1280px) {
+  .featured {
+    height: 100vh;
+  }
+}
+
+.featured__item {
+  padding: 1.7rem;
+}
+
+.featured__excerpt {
+  font-size: 1.3rem;
+}
+
+.featured__title, .featured__excerpt {
+  background-color: rgba(4, 9, 62, 0.8);
+  display: inline-block;
+  margin: 0;
+  padding: 0.85rem;
+  color: #fff;
+}
+
+.featured--bg {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+.featured--img {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 9, 62, 0.3))), url(../../media/images/hero-0-sm.jpg);
+  background-image: linear-gradient(rgba(4, 9, 62, 0.3)), url(../../media/images/hero-0-sm.jpg);
+}
+
+@media (min-width: 1280px) {
+  .featured--img {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 9, 62, 0.3))), url(../../media/images/hero-0.jpg);
+    background-image: linear-gradient(rgba(4, 9, 62, 0.3)), url(../../media/images/hero-0.jpg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
