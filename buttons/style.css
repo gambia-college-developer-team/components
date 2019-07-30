@@ -1,3 +1,6 @@
+/**
+ * Breakpoint Graph map
+ */
 /** 
  * Z-index map
  * @access private
@@ -24,6 +27,9 @@
  * Helper to flex and center items vertically & Horizontally
  * @author Hugo A. Camarian
  */
+/**
+ * 
+ */
 /** 
  * Get a z-index value from a layer name
  * @access public
@@ -43,6 +49,130 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.7;
   font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**
+ * Buttons
+ * 1. Firefox Specific CSS to remove button differences and focus ring
+ * 2. Webkit / Chrome Specific CSS to remove tap highlight color
+ * 3. 
+*/
+.btn {
+  margin: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  min-width: 108px;
+  line-height: 40px;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 0.85rem;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #04093e;
+  text-transform: uppercase;
+  background-image: none;
+  /* 1 */
+  -webkit-tap-highlight-color: transparent;
+  /* 2 */
+}
+
+.btn::-moz-focus-inner {
+  border: 0;
+  /* 1 */
+}
+
+.btn:hover {
+  background-color: #f5f6fe;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 0;
+  background-color: #c5cafb;
+}
+
+.btn:active {
+  background-color: #959ef8;
+}
+
+.btn--link {
+  text-decoration: none;
+}
+
+.btn--disabled {
+  color: #666;
+}
+
+.btn--disabled:hover, .btn--disabled:focus, .btn--disabled:active {
+  outline: 0;
+  cursor: not-allowed;
+  background: transparent;
+}
+
+.btn--block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.btn--raised {
+  -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  -webkit-transition: -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn--outlined {
+  border: 1px solid #04093e;
+  color: #04093e;
+}
+
+.btn--contained {
+  background-color: #04093e;
+  color: #fff;
+}
+
+.btn--contained:hover {
+  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  background-color: #1e30f0;
+}
+
+.btn--contained:focus {
+  outline: 0;
+  background-color: #0d1ece;
+}
+
+.btn--contained:active {
+  background-color: #0a179e;
+}
+
+.btn--toggle:focus {
+  outline: 0;
 }
 
 .btn-bars {

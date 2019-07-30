@@ -1,0 +1,141 @@
+// Variables
+$corner-radius-s: 5px;
+$corner-radius-m: 50px;
+$corner-radius-l: 50%;
+
+
+
+// Mixins
+// Placeholders
+// Functions
+
+/**
+ * Buttons
+ * 1. Firefox Specific CSS to remove button differences and focus ring
+ * 2. Webkit / Chrome Specific CSS to remove tap highlight color
+ * 3. 
+*/
+.btn {
+
+  //TODO remove these
+  margin: 2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 108px; 
+  line-height: 40px;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  border-radius: $corner-radius-s;
+  background-color: transparent;
+  font-size: $vr/2;
+  font-weight: 700;
+  user-select: none;
+  color: getColor(primary);
+  text-transform: uppercase;
+
+  background-image: none; /* 1 */
+  -webkit-tap-highlight-color: transparent; /* 2 */
+  &::-moz-focus-inner {
+    border: 0; /* 1 */
+  }
+
+
+
+  &:hover {
+    background-color: lighten(getColor(primary), 85%);
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+    background-color: lighten(getColor(primary), 75%);
+  }
+
+  &:active {
+    background-color: lighten(getColor(primary), 65%);
+  }
+
+
+
+
+  // Modifiers
+  &--link {
+    text-decoration: none;
+  }
+
+    // states
+  &--disabled {
+    color: getColor(mute);
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0;
+      cursor: not-allowed;
+      background: transparent;
+    }
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &--raised {
+    box-shadow: 
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2),  
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+    0px 1px 5px 0px rgba(0,0,0,.12);
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &--outlined {
+    border: 1px solid getColor(primary);
+    color: getColor(primary);
+    
+  }
+
+  &--contained {
+    background-color: getColor(primary);
+    color: getColor(w);
+
+    &:hover {
+      box-shadow: 
+      0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
+      0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
+      0px 1px 10px 0px rgba(0,0,0,.12);
+      background-color: lighten(getColor(primary), 40%);
+    }
+
+    &:focus {
+      outline: 0;
+      background-color: lighten(getColor(primary), 30%);
+    }
+
+    &:active {
+      background-color: lighten(getColor(primary), 20%);
+    }
+  }
+
+  &--toggle {
+
+    // states
+    &:hover {
+
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:active {
+
+    }
+
+  }
+
+
+}
