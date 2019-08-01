@@ -1,5 +1,5 @@
 // Variables
-$corner-radius-s: 5px;
+$corner-radius-s: 3px;
 $corner-radius-m: 50px;
 $corner-radius-l: 50%;
 
@@ -17,9 +17,6 @@ $corner-radius-l: 50%;
 */
 .btn {
 
-  //TODO remove these
-  margin: 2rem;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -34,29 +31,32 @@ $corner-radius-l: 50%;
   font-size: $vr/2;
   font-weight: 700;
   user-select: none;
-  color: getColor(primary);
+  color: getColor(p-main);
   text-transform: uppercase;
 
   background-image: none; /* 1 */
   -webkit-tap-highlight-color: transparent; /* 2 */
   &::-moz-focus-inner {
     border: 0; /* 1 */
-  }
+  }                 
 
 
 
   &:hover {
-    background-color: lighten(getColor(primary), 85%);
+    background-color: getColor(p-light);
+    color: getColor(w);
     cursor: pointer;
   }
 
   &:focus {
     outline: 0;
-    background-color: lighten(getColor(primary), 75%);
+    background-color: getColor(p-main);
+    color: getColor(w);
   }
 
   &:active {
-    background-color: lighten(getColor(primary), 65%);
+    background-color: getColor(p-dark);
+    color: getColor(w);
   }
 
 
@@ -69,13 +69,14 @@ $corner-radius-l: 50%;
 
     // states
   &--disabled {
-    color: getColor(mute);
+    color: getColor(g-dark);
     &:hover,
     &:focus,
     &:active {
       outline: 0;
       cursor: not-allowed;
       background: transparent;
+      color: getColor(g-dark);
     }
   }
 
@@ -93,13 +94,13 @@ $corner-radius-l: 50%;
   }
 
   &--outlined {
-    border: 1px solid getColor(primary);
-    color: getColor(primary);
+    border: 1px solid getColor(p-main);
+    color: getColor(p-main);
     
   }
 
   &--contained {
-    background-color: getColor(primary);
+    background-color: getColor(p-main);
     color: getColor(w);
 
     &:hover {
@@ -107,16 +108,16 @@ $corner-radius-l: 50%;
       0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
       0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
       0px 1px 10px 0px rgba(0,0,0,.12);
-      background-color: lighten(getColor(primary), 40%);
+      background-color: getColor(p-light);;
     }
 
     &:focus {
       outline: 0;
-      background-color: lighten(getColor(primary), 30%);
+      background-color: getColor(p-dark);
     }
 
     &:active {
-      background-color: lighten(getColor(primary), 20%);
+      background-color: getColor(p-darker);
     }
   }
 
@@ -136,6 +137,5 @@ $corner-radius-l: 50%;
     }
 
   }
-
 
 }
