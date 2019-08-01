@@ -1,0 +1,9 @@
+/**
+ * Responsive Media
+ * prevent images and other content to overflow out of its container
+ * can be applied to: images, embed, object & video
+ */
+.is-responsive {
+  max-width: 100%;
+  height: auto;
+}
