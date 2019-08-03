@@ -67,7 +67,7 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #04093e;
+  background-color: #000051;
   padding: 0.85rem;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .gc-navbar {
-  background-color: rgba(4, 9, 62, 0.7);
+  background-color: rgba(0, 0, 81, 0.7);
 }
 
 .gc-nav {
@@ -168,8 +168,8 @@ body {
 }
 
 .btn-bars__item--btn > span:nth-child(2) {
-  -webkit-transform: scaleX(0.75);
-          transform: scaleX(0.75);
+  -webkit-transform: scaleX(0.9);
+          transform: scaleX(0.9);
 }
 
 .btn-bars__item--btn:hover span:nth-child(1),
