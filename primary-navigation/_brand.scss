@@ -1,6 +1,6 @@
 .gc-brand {
   @include flex-and-center-v;
-  background-color: getColor(primary);
+  background-color: getColor(p-darker);
   padding: $vr/2;
 }
 
