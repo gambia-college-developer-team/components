@@ -1,0 +1,7 @@
+.mobile-nav {
+  @include flex-and-center-v;
+  background-color: getColor(w);
+  @include respond(nav) {
+    display: none;
+  }
+}
