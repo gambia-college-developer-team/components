@@ -1,0 +1,158 @@
+/**
+ * Breakpoint Graph map
+ */
+/** 
+ * Z-index map
+ * @access private
+ * @type Map
+ * @prop {String} key :: z-index layer name
+ * @prop {Number} value :: z-index value mapped to the key
+ */
+/**
+ * Micro Clearfix :: Helper to clear inner floats
+ * @author Nicolas Gallagher
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+/**
+ * Helper to size an element
+ * @author Hugo Giraudel
+ * @param {Length} $height
+ * @param {Length} $width
+ */
+/**
+ * Helper to flex and center items vertically
+ * @author Hugo A. Camarian
+ */
+/**
+ * Helper to flex and center items vertically & Horizontally
+ * @author Hugo A. Camarian
+ */
+/**
+ * 
+ */
+/** 
+ * Get a z-index value from a layer name
+ * @access public
+ * @para {String} $layer :: z-index layer name
+ * @return {Number} 
+ * @require $z-indexes
+ */
+/**
+ * Get color value from a color name
+ * @access public
+ * @para {String} $color :: color name
+ * @return {String} color value
+ * @require $colors
+ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/**
+ * Flexible cover media
+ * This feature has three things:
+ * 1. a cover image via CSS
+ * 2. a cover image via the img or picture element
+ * 3. a cover video via the video element
+ * 
+*/
+.flex-cover {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1a237e;
+  -webkit-transition: height 0.1s ease;
+  transition: height 0.1s ease;
+}
+
+.flex-cover__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.flex-cover > .cover-details {
+  position: relative;
+  z-index: 1;
+}
+
+/** 
+ * Cover details
+ * the are information found on top of the flex cover
+ * they could be position anywhere with the flex cover
+ */
+.cover-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: flex;
+  height: 100%;
+}
+
+.cover-details__item {
+  color: #fff;
+}
+
+/**
+ * Flexible cover background image
+ * Devices that are below 400px will not have any images
+ * The rest will be served with images at three levels
+ ** small, medium and large
+*/
+.cover-bg-img {
+  height: 75vh;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/**
+ * Bg images 
+ * Different sections might use different images
+ * you can identify them with an extension like below
+ */
+@media (min-width: 450px) {
+  .cover-bg-img--featured {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 81, 0.3))), url(../../media/images/hero-s.jpg);
+    background-image: linear-gradient(rgba(0, 0, 81, 0.3)), url(../../media/images/hero-s.jpg);
+  }
+}
+
+@media (min-width: 800px) {
+  .cover-bg-img--featured {
+    height: 60vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 81, 0.3))), url(../../media/images/hero-m.jpg);
+    background-image: linear-gradient(rgba(0, 0, 81, 0.3)), url(../../media/images/hero-m.jpg);
+  }
+}
+
+@media (min-width: 1100px) {
+  .cover-bg-img--featured {
+    height: 50vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 81, 0.3))), url(../../media/images/hero-l.jpg);
+    background-image: linear-gradient(rgba(0, 0, 81, 0.3)), url(../../media/images/hero-l.jpg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
