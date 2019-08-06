@@ -7,7 +7,8 @@
 
     &--menu-text {
       text-transform: uppercase;
-      color: getColor(w);
+      color: getColor(p-darker);
+      font-weight: bold;
     }
 
     &--btn {
@@ -23,7 +24,7 @@
           height: 3px;
           transition: all 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
           transform-origin: 100%;
-          background-color: getColor(w);
+          background-color: getColor(p-darker);
 
           &:nth-child(2) {
             margin: 5px 0;
