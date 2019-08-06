@@ -1,0 +1,41 @@
+/**
+ * Flexible cover background image
+ * Devices that are below 400px will not have any images
+ * The rest will be served with images at three levels
+ ** small, medium and large
+*/
+.cover-bg-img {
+  height: 75vh;          
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/**
+ * Bg images 
+ * Different sections might use different images
+ * you can identify them with an extension like below
+ */
+.cover-bg-img--featured {
+
+  @include respond(small) {
+    background-image: 
+    linear-gradient(rgba(getColor(p-darker),  0.3)),
+    url(../../media/images/hero-s.jpg);
+  }
+
+  @include respond(medium) {
+    height: 60vh;
+    background-image: 
+    linear-gradient(rgba(getColor(p-darker),  0.3)),
+    url(../../media/images/hero-m.jpg);
+  }
+
+  @include respond(large) {
+    height: 50vh;
+    background-image: 
+    linear-gradient(rgba(getColor(p-darker),  0.3)),
+    url(../../media/images/hero-l.jpg);
+  }
+}
