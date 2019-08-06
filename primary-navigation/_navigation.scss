@@ -7,11 +7,25 @@
 
 
 .gc-navbar {
+
   background-color: rgba(getColor(p-darker), 0.7);
+  
+  &__con {
+    @include respond(nav) {
+    @include flex-and-center-vh;
+      display: flex;
+    }
+  }
+  @include respond(nav) {
+    background-color: transparent;
+  }
 }
 
-.gc-navs {
- 
+
+.gc-nav-con {
+  @include respond(nav) {
+    width: 70%;
+ }
 }
 
 .gc-nav {
@@ -20,9 +34,8 @@
     text-decoration: none;
     font-weight: bold;
     color: getColor(w);
-    //font-size: 15px;
     text-align: center;
-  }
+  }  
 }
 
 .gc-primary-nav {
@@ -32,10 +45,21 @@
     border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     padding: 1.7rem 1rem;
+    font-size: 16px;
     
     &:nth-child(odd) {
       border-left: none;
     }
+
+    @include respond(nav) {
+     width: auto;
+     border: none;
+     padding: 1.7rem;
+    }
+  }
+
+  @include respond(nav) {
+    background-color: getColor(p-darker);
   }
 }
 
@@ -44,9 +68,18 @@
   &__item {
     width: 33.3333%;
     padding: 1rem;
+    font-size: 14px;
     
-    &:nth-child(even) {
-      border-left: none;
+    @include respond(nav) {
+      width: auto;
     }
+
   }
+
+  @include respond(nav) {
+    background-color: getColor(p-darker);
+    width: 70%;
+    margin: 1px 0 0 10%;
+  }
+  
 }
