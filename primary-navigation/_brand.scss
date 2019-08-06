@@ -1,13 +1,27 @@
-.gc-brand {
-  @include flex-and-center-v;
-  background-color: getColor(p-darker);
-  padding: $vr/2;
-}
-
-
 .gc-logo {
   margin-right: auto;
   text-decoration: none;
   font-weight: bold;
   color: getColor(w);
+}
+
+// Modifiers
+
+.gc-logo--mobile {
+  background-color: getColor(p-darker);
+  padding: $vr $vr/2;
+  width: 40%;
+  text-align: center;
+}
+/** 
+ * Desktop logo
+ */
+.gc-logo--desktop {
+  display: none;
+  @include respond(nav) {
+    display: block;
+    background-color: getColor(p-darker);
+    width: 250px;
+    height: 250px;
+  }
 }
