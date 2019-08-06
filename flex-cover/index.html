@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Component</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- flex cover with bg image :: here the image is supplied via a CSS -->
+    <div class="flex-cover cover-bg-img">
+      <div class="cover-details">
+        <div class="cover-details__item">
+          <h1 class="cover-details__title">
+            Some title of the flex cover content can come here like so
+          </h1>
+          <p>
+            A little excerpt of what this flex cover is about can also come here
+            like so
+          </p>
+          <!-- a call to action if need be -->
+          <a href="btn btn--link">Read story &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <!-- flex cover with image element -->
+    <div class="flex-cover">
+      <div class="cover-details">
+        <div class="cover-details__item">
+          <h1 class="cover-details__title">
+            Some title of the flex cover content can come here like so
+          </h1>
+          <p>
+            A little excerpt of what this flex cover is about can also come here
+            like so
+          </p>
+          <!-- a call to action if need be -->
+          <a href="btn btn--link">Read story &rarr;</a>
+        </div>
+      </div>
+      <img
+        class="flex-cover__media"
+        src="../../media/images/hero-0.jpg"
+        alt=""
+        aria-hidden="true"
+      />
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <!-- flex cover with picture element -->
+    <div class="flex-cover">
+      <div class="cover-details">
+        <div class="cover-details__item">
+          <h1 class="cover-details__title">
+            Some title of the flex cover content can come here like so
+          </h1>
+          <p>
+            A little excerpt of what this flex cover is about can also come here
+            like so
+          </p>
+          <!-- a call to action if need be -->
+          <a href="btn btn--link">Read story &rarr;</a>
+        </div>
+      </div>
+      <picture aria-hidden="true" class="flex-cover__media">
+        <!-- a large image -->
+        <source
+          media="(min-width: 800px)"
+          srcset="
+            ../../media/images/hero-0-l.jpg,
+            ../../media/images/hero-0-l-2x.jpg 2x
+          "
+        />
+
+        <!-- a medium image -->
+        <source
+          media="(min-width: 450px)"
+          srcset="
+            ../../media/images/hero-0-m.jpg,
+            ../../media/images/hero-0-m-2x.jpg 2x
+          "
+        />
+
+        <!-- a small image -->
+        <img
+          src="../../media/images/hero-0-s.jpg"
+          srcset="../../media/images/hero-0-s-2x.jpg 2x"
+          alt=""
+        />
+      </picture>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <!-- flex cover with video element -->
+    <div class="flex-cover">
+      <div class="cover-details">
+        <div class="cover-details__item">
+          <h1 class="cover-details__title">
+            Some title of the flex cover content can come here like so
+          </h1>
+          <p>
+            A little excerpt of what this flex cover is about can also come here
+            like so
+          </p>
+          <!-- a call to action if need be -->
+          <a href="btn btn--link">Read story &rarr;</a>
+        </div>
+      </div>
+      <video class="flex-cover__media" autoplay loop muted>
+        <source src="../../../LenovoCES2019.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
