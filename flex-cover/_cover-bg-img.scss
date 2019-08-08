@@ -21,21 +21,21 @@
 
   @include respond(small) {
     background-image: 
-    linear-gradient(rgba(getColor(p-darker),  0.3)),
+    linear-gradient(rgba(getColor(p-dark),  0.3)),
     url(../../media/images/hero-s.jpg);
   }
 
   @include respond(medium) {
     height: 60vh;
     background-image: 
-    linear-gradient(rgba(getColor(p-darker),  0.3)),
+    linear-gradient(rgba(getColor(p-dark),  0.3)),
     url(../../media/images/hero-m.jpg);
   }
 
   @include respond(large) {
     height: 50vh;
     background-image: 
-    linear-gradient(rgba(getColor(p-darker),  0.3)),
+    linear-gradient(rgba(getColor(p-dark),  0.3)),
     url(../../media/images/hero-l.jpg);
   }
 }
