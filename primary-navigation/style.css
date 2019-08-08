@@ -84,7 +84,7 @@ body {
 }
 
 .gc-logo--mobile {
-  background-color: #000051;
+  background-color: #000034;
   padding: 1.7rem 0.85rem;
   width: 40%;
   text-align: center;
@@ -100,14 +100,14 @@ body {
 @media (min-width: 1040px) {
   .gc-logo--desktop {
     display: block;
-    background-color: #000051;
+    background-color: #000034;
     width: 250px;
     height: 250px;
   }
 }
 
 .gc-navbar {
-  background-color: rgba(0, 0, 81, 0.7);
+  background-color: rgba(0, 0, 52, 0.7);
 }
 
 @media (min-width: 1040px) {
@@ -182,7 +182,7 @@ body {
 
 @media (min-width: 1040px) {
   .gc-primary-nav {
-    background-color: #000051;
+    background-color: #000034;
   }
 }
 
@@ -200,7 +200,7 @@ body {
 
 @media (min-width: 1040px) {
   .gc-secondary-nav {
-    background-color: #000051;
+    background-color: #000034;
     width: 70%;
     margin: 1px 0 0 10%;
   }
@@ -215,23 +215,23 @@ body {
   vertical-align: middle;
 }
 
-.btn-bars__item--menu-text {
+.item--menu-text {
   text-transform: uppercase;
-  color: #000051;
+  color: #000034;
   font-weight: bold;
 }
 
-.btn-bars__item--btn {
+.item--btn {
   background: none;
   border: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
-  padding: 0.85rem;
+  padding: 8px;
 }
 
-.btn-bars__item--btn > span {
+.item--btn > span {
   display: block;
   width: 1.7rem;
   height: 3px;
@@ -239,25 +239,25 @@ body {
   transition: all 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
   -webkit-transform-origin: 100%;
           transform-origin: 100%;
-  background-color: #000051;
+  background-color: #000034;
 }
 
-.btn-bars__item--btn > span:nth-child(2) {
+.item--btn > span:nth-child(2) {
   margin: 5px 0;
 }
 
-.btn-bars__item--btn > span:nth-child(1) {
+.item--btn > span:nth-child(1) {
   -webkit-transform: scaleX(0.5);
           transform: scaleX(0.5);
 }
 
-.btn-bars__item--btn > span:nth-child(2) {
+.item--btn > span:nth-child(2) {
   -webkit-transform: scaleX(0.9);
           transform: scaleX(0.9);
 }
 
-.btn-bars__item--btn:hover span:nth-child(1),
-.btn-bars__item--btn:hover span:nth-child(2) {
+.item--btn:hover span:nth-child(1),
+.item--btn:hover span:nth-child(2) {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
