@@ -8,7 +8,7 @@
 
 .gc-navbar {
 
-  background-color: rgba(getColor(p-darker), 0.7);
+  background-color: rgba(getColor(p-dark), 0.7);
   
   &__con {
     @include respond(nav) {
@@ -59,7 +59,7 @@
   }
 
   @include respond(nav) {
-    background-color: getColor(p-darker);
+    background-color: getColor(p-dark);
   }
 }
 
@@ -77,7 +77,7 @@
   }
 
   @include respond(nav) {
-    background-color: getColor(p-darker);
+    background-color: getColor(p-dark);
     width: 70%;
     margin: 1px 0 0 10%;
   }

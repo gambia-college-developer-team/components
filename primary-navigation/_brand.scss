@@ -8,7 +8,7 @@
 // Modifiers
 
 .gc-logo--mobile {
-  background-color: getColor(p-darker);
+  background-color: getColor(p-dark);
   padding: $vr $vr/2;
   width: 40%;
   text-align: center;
@@ -20,7 +20,7 @@
   display: none;
   @include respond(nav) {
     display: block;
-    background-color: getColor(p-darker);
+    background-color: getColor(p-dark);
     width: 250px;
     height: 250px;
   }
