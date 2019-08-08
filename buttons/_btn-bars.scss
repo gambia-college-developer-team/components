@@ -4,19 +4,23 @@
   &__item {
     display: inline-block;
     vertical-align: middle;
+  }
+}
 
-    &--menu-text {
+
+.item--menu-text {
       text-transform: uppercase;
-      color: getColor(p-darker);
+      color: getColor(p-dark);
       font-weight: bold;
     }
 
-    &--btn {
+
+.item--btn {
       background: none;
       border: none;
       appearance: none;
       cursor: pointer;
-      padding: $vr/2;
+      padding: 8px;
     
       > span {
           display: block;
@@ -24,13 +28,14 @@
           height: 3px;
           transition: all 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
           transform-origin: 100%;
-          background-color: getColor(p-darker);
+          background-color: getColor(p-dark);
 
           &:nth-child(2) {
             margin: 5px 0;
           }
 
           &:nth-child(1) {
+
             transform: scaleX(0.5);
           }
           &:nth-child(2) {
@@ -45,6 +50,3 @@
           }
         }
     }
-
-  }
-}
