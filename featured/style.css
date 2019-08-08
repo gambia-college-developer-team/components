@@ -77,26 +77,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 40px;
-  min-width: 108px;
-  line-height: 40px;
-  padding: 0 16px;
+  line-height: 1.7;
+  padding: 8px 16px;
   border: none;
   outline: none;
-  border-radius: 3px;
-  background-color: transparent;
-  font-size: 0.85rem;
-  font-weight: 700;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: #1a237e;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
+  background-color: transparent;
+  color: #000;
   background-image: none;
   /* 1 */
   -webkit-tap-highlight-color: transparent;
   /* 2 */
+  border-radius: 3px;
 }
 
 .btn::-moz-focus-inner {
@@ -104,36 +103,12 @@ body {
   /* 1 */
 }
 
-.btn:hover {
-  background-color: #534bae;
-  color: #fff;
-  cursor: pointer;
-}
-
 .btn:focus {
   outline: 0;
-  background-color: #1a237e;
-  color: #fff;
-}
-
-.btn:active {
-  background-color: #121858;
-  color: #fff;
 }
 
 .btn--link {
   text-decoration: none;
-}
-
-.btn--disabled {
-  color: #757575;
-}
-
-.btn--disabled:hover, .btn--disabled:focus, .btn--disabled:active {
-  outline: 0;
-  cursor: not-allowed;
-  background: transparent;
-  color: #757575;
 }
 
 .btn--block {
@@ -143,136 +118,194 @@ body {
   width: 100%;
 }
 
-.btn--raised {
-  -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  -webkit-transition: -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+.btn--disabled {
+  color: #9d9d9d;
+  cursor: default;
+  pointer-events: none;
 }
 
-.btn--outlined {
-  border: 1px solid #1a237e;
-  color: #1a237e;
+.btn--disabled:hover, .btn--disabled:focus, .btn--disabled:active {
+  background: transparent;
 }
 
+/** 
+ * contained Buttons
+ */
 .btn--contained {
-  background-color: #1a237e;
-  color: #fff;
+  background-color: #c0c0c0;
 }
 
 .btn--contained:hover {
-  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  background-color: #534bae;
+  background-color: #a7a7a7;
 }
 
 .btn--contained:focus {
-  outline: 0;
-  background-color: #121858;
+  background-color: #9a9a9a;
 }
 
 .btn--contained:active {
-  background-color: #000051;
+  background-color: #8d8d8d;
 }
 
-.btn--toggle:focus {
-  outline: 0;
+.contained--primary {
+  background-color: #3c528c;
+  color: #fff;
 }
 
+.contained--primary:hover {
+  background-color: #2d3d68;
+}
+
+.contained--primary:focus {
+  background-color: #253356;
+}
+
+.contained--primary:active {
+  background-color: #1d2845;
+}
+
+.contained--secondary {
+  background-color: #ffca00;
+}
+
+.contained--secondary:hover {
+  background-color: #cca200;
+}
+
+.contained--secondary:focus {
+  background-color: #b38d00;
+}
+
+.contained--secondary:active {
+  background-color: #997900;
+}
+
+.contained--disabled {
+  background-color: #d5d5d5;
+}
+
+/** 
+ * Outlined Buttons
+ */
+.btn--outlined {
+  border: 1px solid #c0c0c0;
+}
+
+.btn--outlined:hover {
+  background-color: #c7c7c7;
+  border-color: #a7a7a7;
+}
+
+.btn--outlined:focus {
+  background-color: #bababa;
+  border-color: #9a9a9a;
+}
+
+.btn--outlined:active {
+  background-color: #adadad;
+  border-color: #c0c0c0;
+}
+
+.outlined--primary {
+  border: 1px solid #3c528c;
+  color: #3c528c;
+}
+
+.outlined--primary:hover {
+  background-color: #eaeef6;
+}
+
+.outlined--primary:focus {
+  background-color: #d9dfef;
+}
+
+.outlined--primary:active {
+  background-color: #c7d0e7;
+}
+
+/** 
+ * Outlined Buttons
+ */
+.btn--text:hover {
+  background-color: #c7c7c7;
+}
+
+.btn--text:focus {
+  background-color: #bababa;
+}
+
+.btn--text:active {
+  background-color: #adadad;
+}
+
+.text--primary {
+  color: #3c528c;
+}
+
+.text--primary:hover {
+  background-color: #eaeef6;
+}
+
+.text--primary:focus {
+  background-color: #d9dfef;
+}
+
+.text--primary:active {
+  background-color: #c7d0e7;
+}
+
+/* 
+.btn--outlined {
+    border: 1px solid getColor(p-main);
+    color: getColor(p-main);
+}
+
+
+
+// states modofiers
+.btn--disabled {
+    color: getColor(g-dark);
+    
+    background: getColor(g-dark);
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0;
+      cursor: not-allowed;
+      background: getColor(g-dark);
+      color: getColor(g-dark);
+    }
+  }
+
+
+
+.btn--raised {
+    box-shadow: 
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2),  
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+    0px 1px 5px 0px rgba(0,0,0,.12);
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
+
+.btn--toggle {
+
+    // states
+    &:hover {
+
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:active {
+
+    }
+
+  } */
 /**
  * 
  */
-.featured {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  background-color: #1a237e;
-  -webkit-transition: height 0.1s ease;
-  transition: height 0.1s ease;
-}
-
-/**
- * Flexible cover media
- * This feature has three things:
- * 1. a cover image via CSS
- * 2. a cover image via the img or picture element
- * 3. a cover video via the video element
- * 
-*/
-.flex-cover {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #1a237e;
-  -webkit-transition: height 0.1s ease;
-  transition: height 0.1s ease;
-}
-
-.flex-cover__media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-}
-
-/**
- * Flexible cover background image
- * Devices that are below 400px will not have any images
- * The rest will be served with images at three levels
- ** small, medium and large
-*/
-.flex-cover--bg-img {
-  height: 75vh;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-@media (min-width: 450px) {
-  .flex-cover--bg-img {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 81, 0.3))), url(../../media/images/hero-s.jpg);
-    background-image: linear-gradient(rgba(0, 0, 81, 0.3)), url(../../media/images/hero-s.jpg);
-  }
-}
-
-@media (min-width: 800px) {
-  .flex-cover--bg-img {
-    height: 60vh;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 81, 0.3))), url(../../media/images/hero-m.jpg);
-    background-image: linear-gradient(rgba(0, 0, 81, 0.3)), url(../../media/images/hero-m.jpg);
-  }
-}
-
-@media (min-width: 1100px) {
-  .flex-cover--bg-img {
-    height: 50vh;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 81, 0.3))), url(../../media/images/hero-l.jpg);
-    background-image: linear-gradient(rgba(0, 0, 81, 0.3)), url(../../media/images/hero-l.jpg);
-  }
-}
-
-.cover-media {
-  /**
-   * Flexible cover image via img element 
-  */
-  /**
-   * Flexible cover image via picture element 
-  */
-  /**
-   * Flexible cover video via video element
-  */
-}
 /*# sourceMappingURL=style.css.map */
