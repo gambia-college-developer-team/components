@@ -45,7 +45,6 @@
  * @require $colors
  */
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.7;
   font-size: 1rem;
@@ -74,26 +73,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 40px;
-  min-width: 108px;
-  line-height: 40px;
-  padding: 0 16px;
+  line-height: 1.7;
+  padding: 8px 16px;
   border: none;
   outline: none;
-  border-radius: 3px;
-  background-color: transparent;
-  font-size: 0.85rem;
-  font-weight: 700;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: #1a237e;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
+  background-color: transparent;
+  color: #000;
   background-image: none;
   /* 1 */
   -webkit-tap-highlight-color: transparent;
   /* 2 */
+  border-radius: 3px;
 }
 
 .btn::-moz-focus-inner {
@@ -101,36 +99,12 @@ body {
   /* 1 */
 }
 
-.btn:hover {
-  background-color: #534bae;
-  color: #fff;
-  cursor: pointer;
-}
-
 .btn:focus {
   outline: 0;
-  background-color: #1a237e;
-  color: #fff;
-}
-
-.btn:active {
-  background-color: #121858;
-  color: #fff;
 }
 
 .btn--link {
   text-decoration: none;
-}
-
-.btn--disabled {
-  color: #757575;
-}
-
-.btn--disabled:hover, .btn--disabled:focus, .btn--disabled:active {
-  outline: 0;
-  cursor: not-allowed;
-  background: transparent;
-  color: #757575;
 }
 
 .btn--block {
@@ -140,44 +114,193 @@ body {
   width: 100%;
 }
 
-.btn--raised {
-  -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  -webkit-transition: -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+.btn--disabled {
+  color: #9d9d9d;
+  cursor: default;
+  pointer-events: none;
 }
 
-.btn--outlined {
-  border: 1px solid #1a237e;
-  color: #1a237e;
+.btn--disabled:hover, .btn--disabled:focus, .btn--disabled:active {
+  background: transparent;
 }
 
+/** 
+ * contained Buttons
+ */
 .btn--contained {
-  background-color: #1a237e;
-  color: #fff;
+  background-color: #c0c0c0;
 }
 
 .btn--contained:hover {
-  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  background-color: #534bae;
+  background-color: #a7a7a7;
 }
 
 .btn--contained:focus {
-  outline: 0;
-  background-color: #121858;
+  background-color: #9a9a9a;
 }
 
 .btn--contained:active {
-  background-color: #000051;
+  background-color: #8d8d8d;
 }
 
-.btn--toggle:focus {
-  outline: 0;
+.contained--primary {
+  background-color: #3c528c;
+  color: #fff;
 }
 
+.contained--primary:hover {
+  background-color: #2d3d68;
+}
+
+.contained--primary:focus {
+  background-color: #253356;
+}
+
+.contained--primary:active {
+  background-color: #1d2845;
+}
+
+.contained--secondary {
+  background-color: #ffca00;
+}
+
+.contained--secondary:hover {
+  background-color: #cca200;
+}
+
+.contained--secondary:focus {
+  background-color: #b38d00;
+}
+
+.contained--secondary:active {
+  background-color: #997900;
+}
+
+.contained--disabled {
+  background-color: #d5d5d5;
+}
+
+/** 
+ * Outlined Buttons
+ */
+.btn--outlined {
+  border: 1px solid #c0c0c0;
+}
+
+.btn--outlined:hover {
+  background-color: #c7c7c7;
+  border-color: #a7a7a7;
+}
+
+.btn--outlined:focus {
+  background-color: #bababa;
+  border-color: #9a9a9a;
+}
+
+.btn--outlined:active {
+  background-color: #adadad;
+  border-color: #c0c0c0;
+}
+
+.outlined--primary {
+  border: 1px solid #3c528c;
+  color: #3c528c;
+}
+
+.outlined--primary:hover {
+  background-color: #eaeef6;
+}
+
+.outlined--primary:focus {
+  background-color: #d9dfef;
+}
+
+.outlined--primary:active {
+  background-color: #c7d0e7;
+}
+
+/** 
+ * Outlined Buttons
+ */
+.btn--text:hover {
+  background-color: #c7c7c7;
+}
+
+.btn--text:focus {
+  background-color: #bababa;
+}
+
+.btn--text:active {
+  background-color: #adadad;
+}
+
+.text--primary {
+  color: #3c528c;
+}
+
+.text--primary:hover {
+  background-color: #eaeef6;
+}
+
+.text--primary:focus {
+  background-color: #d9dfef;
+}
+
+.text--primary:active {
+  background-color: #c7d0e7;
+}
+
+/* 
+.btn--outlined {
+    border: 1px solid getColor(p-main);
+    color: getColor(p-main);
+}
+
+
+
+// states modofiers
+.btn--disabled {
+    color: getColor(g-dark);
+    
+    background: getColor(g-dark);
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0;
+      cursor: not-allowed;
+      background: getColor(g-dark);
+      color: getColor(g-dark);
+    }
+  }
+
+
+
+.btn--raised {
+    box-shadow: 
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2),  
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+    0px 1px 5px 0px rgba(0,0,0,.12);
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
+
+.btn--toggle {
+
+    // states
+    &:hover {
+
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:active {
+
+    }
+
+  } */
 .btn-bars {
   display: inline-block;
 }
@@ -187,23 +310,23 @@ body {
   vertical-align: middle;
 }
 
-.btn-bars__item--menu-text {
+.item--menu-text {
   text-transform: uppercase;
-  color: #000051;
+  color: #000034;
   font-weight: bold;
 }
 
-.btn-bars__item--btn {
+.item--btn {
   background: none;
   border: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
-  padding: 0.85rem;
+  padding: 8px;
 }
 
-.btn-bars__item--btn > span {
+.item--btn > span {
   display: block;
   width: 1.7rem;
   height: 3px;
@@ -211,25 +334,25 @@ body {
   transition: all 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
   -webkit-transform-origin: 100%;
           transform-origin: 100%;
-  background-color: #000051;
+  background-color: #000034;
 }
 
-.btn-bars__item--btn > span:nth-child(2) {
+.item--btn > span:nth-child(2) {
   margin: 5px 0;
 }
 
-.btn-bars__item--btn > span:nth-child(1) {
+.item--btn > span:nth-child(1) {
   -webkit-transform: scaleX(0.5);
           transform: scaleX(0.5);
 }
 
-.btn-bars__item--btn > span:nth-child(2) {
+.item--btn > span:nth-child(2) {
   -webkit-transform: scaleX(0.9);
           transform: scaleX(0.9);
 }
 
-.btn-bars__item--btn:hover span:nth-child(1),
-.btn-bars__item--btn:hover span:nth-child(2) {
+.item--btn:hover span:nth-child(1),
+.item--btn:hover span:nth-child(2) {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }

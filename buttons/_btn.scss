@@ -20,72 +20,222 @@ $corner-radius-l: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  min-width: 108px; 
-  line-height: 40px;
-  padding: 0 16px;
+  line-height: 1.7;
+  padding: 8px 16px;
   border: none;
   outline: none;
-  border-radius: $corner-radius-s;
-  background-color: transparent;
+  cursor: pointer; 
+  user-select: none;
   font-size: $vr/2;
   font-weight: 700;
-  user-select: none;
-  color: getColor(p-main);
   text-transform: uppercase;
-
+  background-color: transparent;
+  color: getColor(b);
   background-image: none; /* 1 */
   -webkit-tap-highlight-color: transparent; /* 2 */
   &::-moz-focus-inner {
     border: 0; /* 1 */
-  }                 
-
-
-
-  &:hover {
-    background-color: getColor(p-light);
-    color: getColor(w);
-    cursor: pointer;
   }
-
+  
   &:focus {
     outline: 0;
-    background-color: getColor(p-main);
-    color: getColor(w);
   }
 
+  //TODO for now all buttons are rounded a bit
+  border-radius: $corner-radius-s;
+}
+
+
+// Modifiers
+.btn--link {
+  text-decoration: none;
+}
+
+.btn--block {
+  display: flex;
+  width: 100%;
+}
+
+.btn--disabled {
+  color: getColor(dis-tx);
+  cursor: default;
+  pointer-events: none;
+  &:hover,
+  &:focus,
   &:active {
-    background-color: getColor(p-dark);
-    color: getColor(w);
+    background: transparent;
   }
+}
 
 
 
 
-  // Modifiers
-  &--link {
-    text-decoration: none;
-  }
 
-    // states
-  &--disabled {
+/** 
+ * contained Buttons
+ */
+.btn--contained {
+    background-color: getColor(g-main);
+    &:hover {     
+      background-color: darken(getColor(g-main), 10%);
+    }
+
+    &:focus {
+      background-color: darken(getColor(g-main), 15%);
+    }
+
+    &:active {
+      background-color: darken(getColor(g-main), 20%);
+    }
+}
+
+.contained--primary {
+  background-color: getColor(p-light);
+  color: getColor(w);
+    &:hover {     
+      background-color: darken(getColor(p-light), 10%);
+    }
+
+    &:focus {
+      background-color: darken(getColor(p-light), 15%);
+    }
+
+    &:active {
+      background-color: darken(getColor(p-light), 20%);
+    }
+}
+
+.contained--secondary {
+    background-color: getColor(s-main);
+    &:hover {     
+      background-color: darken(getColor(s-main), 10%);
+    }
+
+    &:focus {
+      background-color: darken(getColor(s-main), 15%);
+    }
+
+    &:active {
+      background-color: darken(getColor(s-main), 20%);
+    }
+}
+
+.contained--disabled {
+  background-color: getColor(dis-bg);  
+}
+
+
+
+
+
+/** 
+ * Outlined Buttons
+ */
+.btn--outlined {
+    border: 1px solid getColor(g-main);
+   
+    &:hover {     
+      background-color: darken(getColor(g-light), 10%);
+      border-color: darken(getColor(g-main), 10%);
+    }
+
+    &:focus {
+      background-color: darken(getColor(g-light), 15%);
+      border-color: darken(getColor(g-main), 15%);
+    }
+
+    &:active {
+      background-color: darken(getColor(g-light), 20%);
+      border-color: getColor(g-main);
+    }
+}
+
+.outlined--primary {
+    border: 1px solid getColor(p-light);
+    color: getColor(p-light);
+    &:hover {     
+      background-color: lighten(getColor(p-light), 55%);
+    }
+
+    &:focus {
+      background-color: lighten(getColor(p-light), 50%);
+    }
+
+    &:active {
+      background-color: lighten(getColor(p-light), 45%);
+    }
+}
+
+
+
+
+
+/** 
+ * Outlined Buttons
+ */
+.btn--text {
+   
+    &:hover {     
+      background-color: darken(getColor(g-light), 10%);
+    }
+
+    &:focus {
+      background-color: darken(getColor(g-light), 15%);
+     
+    }
+
+    &:active {
+      background-color: darken(getColor(g-light), 20%);
+    }
+}
+
+.text--primary {
+    color: getColor(p-light);
+    &:hover {     
+      background-color: lighten(getColor(p-light), 55%);
+    }
+
+    &:focus {
+      background-color: lighten(getColor(p-light), 50%);
+    }
+
+    &:active {
+      background-color: lighten(getColor(p-light), 45%);
+    }
+}
+
+
+
+
+
+
+
+/* 
+.btn--outlined {
+    border: 1px solid getColor(p-main);
+    color: getColor(p-main);
+}
+
+
+
+// states modofiers
+.btn--disabled {
     color: getColor(g-dark);
+    
+    background: getColor(g-dark);
     &:hover,
     &:focus,
     &:active {
       outline: 0;
       cursor: not-allowed;
-      background: transparent;
+      background: getColor(g-dark);
       color: getColor(g-dark);
     }
   }
 
-  &--block {
-    display: flex;
-    width: 100%;
-  }
 
-  &--raised {
+
+.btn--raised {
     box-shadow: 
     0px 3px 1px -2px rgba(0, 0, 0, 0.2),  
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
@@ -93,35 +243,9 @@ $corner-radius-l: 50%;
     transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &--outlined {
-    border: 1px solid getColor(p-main);
-    color: getColor(p-main);
-    
-  }
 
-  &--contained {
-    background-color: getColor(p-main);
-    color: getColor(w);
 
-    &:hover {
-      box-shadow: 
-      0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
-      0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
-      0px 1px 10px 0px rgba(0,0,0,.12);
-      background-color: getColor(p-light);;
-    }
-
-    &:focus {
-      outline: 0;
-      background-color: getColor(p-dark);
-    }
-
-    &:active {
-      background-color: getColor(p-darker);
-    }
-  }
-
-  &--toggle {
+.btn--toggle {
 
     // states
     &:hover {
@@ -136,6 +260,4 @@ $corner-radius-l: 50%;
 
     }
 
-  }
-
-}
+  } */
