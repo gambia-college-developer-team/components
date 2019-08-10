@@ -1,0 +1,38 @@
+/**
+ * Media Object
+ * As in Nicole's media block, here we call it object since we want to
+ * deal with many types of media 
+ */
+
+.object {
+  display: flex;
+  align-items: flex-start;
+
+  &__media {
+    margin-right: $vr;
+  }
+
+  &__details {
+    flex: 1;
+  }
+}
+
+/**
+ * Object flex - a flexible responsive media object
+ * stack on small devices and side by on big devices
+ */
+.object--flex {
+  flex-direction: column;
+
+  > .object__media {
+    margin-right: 0;
+    margin-bottom: $vr;
+  }
+}
+
+
+.media--end {
+  margin-right: 0;
+  margin-left: $vr;
+  order: 1;
+}
