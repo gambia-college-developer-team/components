@@ -1,0 +1,131 @@
+/**
+ * Breakpoint Graph map
+ */
+/** 
+ * Z-index map
+ * @access private
+ * @type Map
+ * @prop {String} key :: z-index layer name
+ * @prop {Number} value :: z-index value mapped to the key
+ */
+/**
+ * Micro Clearfix :: Helper to clear inner floats
+ * @author Nicolas Gallagher
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+/**
+ * Helper to size an element
+ * @author Hugo Giraudel
+ * @param {Length} $height
+ * @param {Length} $width
+ */
+/**
+ * Helper to flex and center items vertically
+ * @author Hugo A. Camarian
+ */
+/**
+ * Helper to flex and center items vertically & Horizontally
+ * @author Hugo A. Camarian
+ */
+/**
+ * 
+ */
+/** 
+ * Get a z-index value from a layer name
+ * @access public
+ * @para {String} $layer :: z-index layer name
+ * @return {Number} 
+ * @require $z-indexes
+ */
+/**
+ * Get color value from a color name
+ * @access public
+ * @para {String} $color :: color name
+ * @return {String} color value
+ * @require $colors
+ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/**
+ * Responsive Media
+ * prevent images and other content to overflow out of its container
+ * can be applied to: images, embed, object & video
+ */
+.is-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.is-size-t {
+  width: 32px;
+  height: 32px;
+}
+
+.is-size-s {
+  width: 64px;
+  height: 64px;
+}
+
+.is-size-m {
+  width: 200px;
+  height: 200px;
+}
+
+.is-size-l {
+  width: 300px;
+  height: 300px;
+}
+
+/**
+ * Media Object
+ * As in Nicole's media block, here we call it object since we want to
+ * deal with many types of media 
+ */
+.object {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.object__media {
+  margin-right: 1.7rem;
+}
+
+.object__details {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/**
+ * Object flex - a flexible responsive media object
+ * stack on small devices and side by on big devices
+ */
+.object--flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.object--flex > .object__media {
+  margin-right: 0;
+  margin-bottom: 1.7rem;
+}
+
+.media--end {
+  margin-right: 0;
+  margin-left: 1.7rem;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+/*# sourceMappingURL=style.css.map */
