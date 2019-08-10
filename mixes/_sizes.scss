@@ -1,0 +1,16 @@
+
+.is-size-t {
+  @include size(32px, 32px);
+}
+
+.is-size-s {
+  @include size(64px, 64px);
+}
+
+.is-size-m {
+  @include size(200px, 200px);
+}
+
+.is-size-l {
+  @include size(300px, 300px);
+}
