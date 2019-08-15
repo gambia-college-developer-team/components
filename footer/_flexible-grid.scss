@@ -1,0 +1,46 @@
+$vr-m:  $vr*1.5;
+
+.row {
+  
+  margin-top: -$vr-m;
+  margin-left: -$vr-m;
+
+  &:not(:last-child) {
+    margin-bottom: $vr-m;
+  }
+
+  @include respond(medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+
+.row__col {
+  
+  margin-top: $vr-m;
+  margin-left: $vr-m;
+
+  @include respond(medium) {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;    
+    
+  }
+}
+
+
+// modifiers if needed
+@include respond(medium) {
+
+  .row-ai {
+    align-items: center;
+  }
+
+
+  .col--is-third {
+    flex: none;
+    width: 60%;
+  }
+}
