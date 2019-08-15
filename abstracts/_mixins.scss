@@ -52,7 +52,7 @@
  */
 @mixin respond($bp) {
   @if map-has-key($bps, $bp) {
-    @media(min-width: #{map-get($bps, $bp)}) {
+    @media screen and (min-width: #{map-get($bps, $bp)}) {
       @content;
     }
   } @else {
