@@ -1,0 +1,18 @@
+.page {
+  max-width:  124rem;
+  margin: 0 auto;
+}
+
+.con {
+ // max-width:  20rem;
+  max-width:  80rem;
+  margin: 0 auto;
+  padding: 0 $vr/2;
+  @include respond(small) {
+    padding: 0 $vr;
+  }
+}
+
+.con--mini {
+  max-width:  60rem;
+}
