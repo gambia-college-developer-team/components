@@ -1,0 +1,78 @@
+.ft-sec {
+  padding: $vr 0;
+
+  @include respond(medium) {
+    padding: $vr*2 0;
+  }
+}
+
+
+.ft-nav > a {
+
+  display: block;
+  padding: $vr/3;
+  border-top: 1px solid getColor(g-light);
+  color: getColor(p-main);
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+
+  &::before {
+    content: '→';
+    margin-right: $vr/2;
+  }
+
+  &:hover {
+    &::before {
+    content: '→';
+      margin-left: $vr/2;
+    }
+  }
+}
+
+/**
+ * Social nav found in the footer
+ */
+.ft-flex-nav {
+  display: flex;
+  flex-wrap: wrap;  
+
+  > a {
+    padding: $vr/2;
+    color: getColor(p-main);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+  }
+}
+
+.ft-cta-group {
+  > a {
+
+    padding: 16px;
+
+    &::before {
+    content: '→';
+    margin-right: $vr/2;
+    }
+
+    &:hover {
+      &::before {
+      content: '→';
+        margin-left: $vr/2;
+      }
+    }
+  }
+}
+
+
+
+// Modifiers
+.ft-sec--p {
+  background-color: getColor(g-lighter);
+}
+
+.ft-sec--s {
+  background-color: getColor(p-dark);
+  color: getColor(w);
+}
