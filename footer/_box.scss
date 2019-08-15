@@ -1,0 +1,26 @@
+.box {
+  padding: $vr;
+}
+
+.box--p {
+  background-color: getColor(p-dark);
+  color: getColor(w);
+}
+
+.box--s {
+  background-color: getColor(s-main);
+  color: getColor(b);
+}
+
+
+
+
+.box-over {
+  position: relative;
+  margin-bottom: $vr*2;
+}
+
+.box-over--m {
+  margin-top: -$vr*4;
+}
+
