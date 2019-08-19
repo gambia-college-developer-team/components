@@ -56,7 +56,7 @@ body {
  * prevent images and other content to overflow out of its container
  * can be applied to: images, embed, object & video
  */
-.is-responsive {
+.is-res {
   max-width: 100%;
   height: auto;
 }
