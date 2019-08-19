@@ -1,0 +1,267 @@
+/**
+ * Breakpoint Graph map
+ */
+/** 
+ * Z-index map
+ * @access private
+ * @type Map
+ * @prop {String} key :: z-index layer name
+ * @prop {Number} value :: z-index value mapped to the key
+ */
+/**
+ * Micro Clearfix :: Helper to clear inner floats
+ * @author Nicolas Gallagher
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+/**
+ * Helper to size an element
+ * @author Hugo Giraudel
+ * @param {Length} $height
+ * @param {Length} $width
+ */
+/**
+ * Helper to flex and center items vertically
+ * @author Hugo A. Camarian
+ */
+/**
+ * Helper to flex and center items vertically & Horizontally
+ * @author Hugo A. Camarian
+ */
+/**
+ * 
+ */
+/** 
+ * Get a z-index value from a layer name
+ * @access public
+ * @para {String} $layer :: z-index layer name
+ * @return {Number} 
+ * @require $z-indexes
+ */
+/**
+ * Get color value from a color name
+ * @access public
+ * @para {String} $color :: color name
+ * @return {String} color value
+ * @require $colors
+ */
+body {
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.card {
+  background-color: #fff;
+}
+
+.card .title {
+  margin-top: 0;
+}
+
+.card__media {
+  display: block;
+}
+
+.card__details {
+  padding: 0.85rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .card__details {
+    padding: 1.7rem;
+  }
+}
+
+.card--cover {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vw;
+  max-height: 100vh;
+  background-color: #002a5e;
+  color: #fff;
+  overflow: hidden;
+}
+
+.card--cover .card__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card--cover .card__details {
+  padding: 1.7rem;
+  z-index: 1;
+}
+
+.card--cover--bl {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.card--cover--bl .card__details {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, rgba(0, 0, 0, 0.85)));
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.85) 80%);
+}
+
+/* things that have to the core css */
+.gc-nb {
+  border-top: 5px solid #002a5e;
+}
+
+/**
+ * Responsive Media
+ * prevent images and other content to overflow out of its container
+ * can be applied to: images, embed, object & video
+ */
+.is-res {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Buttons
+*/
+.cta {
+  display: inline-block;
+  line-height: 1.7;
+  padding: 8px 16px;
+  border: 2px solid #002a5e;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #002a5e;
+}
+
+.cta:hover {
+  background-color: #002a5e;
+  color: #fff;
+}
+
+.cta:focus {
+  background-color: #3c528c;
+  border-color: #3c528c;
+  color: #fff;
+}
+
+.cta:active {
+  background-color: #000034;
+  border-color: #000034;
+  color: #fff;
+}
+
+.cta--link {
+  text-decoration: none;
+}
+
+.cta--block {
+  display: block;
+}
+
+[disabled] {
+  color: #9d9d9d;
+  border-color: #9d9d9d;
+  cursor: default;
+  pointer-events: none;
+}
+
+[disabled]:hover, [disabled]:focus, [disabled]:active {
+  background: transparent;
+}
+
+.cta--s {
+  background-color: #ffca00;
+  color: #000;
+  border-color: #ffca00;
+}
+
+.cta--s:hover, .cta--s:focus, .cta--s:active {
+  background-color: #c79a00;
+  border-color: #c79a00;
+  color: #000;
+}
+
+/** 
+ * Outlined Buttons
+ */
+.cta--txt {
+  border: none;
+  background-color: transparent;
+  color: #757575;
+}
+
+.cta--txt:hover {
+  background-color: #3c528c;
+}
+
+.cta--txt:focus {
+  background-color: #002a5e;
+}
+
+.cta--txt:active {
+  background-color: #000034;
+}
+
+.cta-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+/**
+ * Group that has space in between
+ */
+.cta-group--gap {
+  margin: -1.7rem;
+}
+
+.cta-group--gap > .cta {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  margin: 1.7rem;
+}
+/*# sourceMappingURL=style.css.map */

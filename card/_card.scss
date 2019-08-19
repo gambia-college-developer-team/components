@@ -1,0 +1,75 @@
+.card {
+  background-color: getColor(w);
+
+  .title {
+    margin-top: 0;
+  }
+
+  //outline: 1px solid red;
+ 
+}
+
+.card__media {
+  display: block;
+}
+
+.card__details {
+  @include respond(large) {
+    padding: $vr;
+  }
+  padding: $vr/2;
+}
+
+
+// modifiers
+
+.card--cover {
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  height: 100vw;
+  max-height: 100vh;
+  background-color: getColor(p-main);
+  color: getColor(w);
+  overflow: hidden;
+
+  .card__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    object-fit: cover;
+  }
+
+  .card__details {
+    
+    padding: $vr;
+    z-index: getZIndex(default);
+  }
+}
+
+.card--cover--bl { 
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  .card__details {
+    width: 100%;
+    background: linear-gradient(180deg,transparent,rgba(0,0,0,.85) 80%);
+  }
+}
+
+
+
+
+
+
+/* things that have to the core css */
+.gc-nb {
+  border-top: 5px solid getColor(p-main);
+}
