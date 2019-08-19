@@ -70,7 +70,7 @@ body {
   background-color: #fff;
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .mobile-nav {
     display: none;
   }
@@ -97,7 +97,7 @@ body {
   display: none;
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .gc-logo--desktop {
     display: block;
     background-color: #000034;
@@ -110,7 +110,7 @@ body {
   background-color: rgba(0, 0, 52, 0.7);
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .gc-navbar__con {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -127,13 +127,13 @@ body {
   }
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .gc-navbar {
     background-color: transparent;
   }
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .gc-nav-con {
     width: 70%;
   }
@@ -172,7 +172,7 @@ body {
   border-left: none;
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .gc-primary-nav__item {
     width: auto;
     border: none;
@@ -180,7 +180,7 @@ body {
   }
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .gc-primary-nav {
     background-color: #000034;
   }
@@ -192,13 +192,13 @@ body {
   font-size: 14px;
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .gc-secondary-nav__item {
     width: auto;
   }
 }
 
-@media (min-width: 1040px) {
+@media screen and (min-width: 1040px) {
   .gc-secondary-nav {
     background-color: #000034;
     width: 70%;
