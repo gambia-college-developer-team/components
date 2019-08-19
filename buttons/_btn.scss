@@ -94,6 +94,8 @@ $corner-radius-l: 50%;
 .cta--txt {
   
     border: none;
+    background-color: transparent;
+    color: getColor(g-dark);
 
     &:hover {     
       background-color: getColor(p-light);

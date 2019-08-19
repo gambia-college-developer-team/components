@@ -131,6 +131,8 @@ body {
  */
 .cta--txt {
   border: none;
+  background-color: transparent;
+  color: #757575;
 }
 
 .cta--txt:hover {
