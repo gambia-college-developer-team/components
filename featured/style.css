@@ -56,21 +56,19 @@ body {
  * prevent images and other content to overflow out of its container
  * can be applied to: images, embed, object & video
  */
-.is-responsive {
+.is-res {
   max-width: 100%;
   height: auto;
 }
 
 /**
  * Buttons
- * 1. Firefox Specific CSS to remove button differences and focus ring
- * 2. Webkit / Chrome Specific CSS to remove tap highlight color
- * 3. 
 */
-.btn {
+.cta {
+  display: inline-block;
   line-height: 1.7;
   padding: 8px 16px;
-  border: none;
+  border: 2px solid #002a5e;
   outline: none;
   cursor: pointer;
   -webkit-user-select: none;
@@ -80,205 +78,110 @@ body {
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: transparent;
-  color: #000;
-  border-radius: 3px;
+  background-color: #fff;
+  color: #002a5e;
 }
 
-.btn:focus {
-  outline: 0;
-}
-
-.btn--link {
-  text-decoration: none;
-}
-
-.btn--block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.btn--disabled {
-  color: #9d9d9d;
-  cursor: default;
-  pointer-events: none;
-}
-
-.btn--disabled:hover, .btn--disabled:focus, .btn--disabled:active {
-  background: transparent;
-}
-
-/** 
- * contained Buttons
- */
-.btn--contained {
-  background-color: #c0c0c0;
-}
-
-.btn--contained:hover {
-  background-color: #a7a7a7;
-}
-
-.btn--contained:focus {
-  background-color: #9a9a9a;
-}
-
-.btn--contained:active {
-  background-color: #8d8d8d;
-}
-
-.contained--primary {
-  background-color: #3c528c;
+.cta:hover {
+  background-color: #002a5e;
   color: #fff;
 }
 
-.contained--primary:hover {
-  background-color: #2d3d68;
+.cta:focus {
+  background-color: #3c528c;
+  border-color: #3c528c;
+  color: #fff;
 }
 
-.contained--primary:focus {
-  background-color: #253356;
-}
-
-.contained--primary:active {
-  background-color: #1d2845;
-}
-
-.contained--secondary {
-  background-color: #ffca00;
-}
-
-.contained--secondary:hover {
-  background-color: #cca200;
-}
-
-.contained--secondary:focus {
-  background-color: #b38d00;
-}
-
-.contained--secondary:active {
-  background-color: #997900;
-}
-
-.contained--disabled {
-  background-color: #d5d5d5;
-}
-
-/** 
- * Outlined Buttons
- */
-.btn--outlined {
-  border: 1px solid #c0c0c0;
-}
-
-.btn--outlined:hover {
-  background-color: #c7c7c7;
-  border-color: #a7a7a7;
-}
-
-.btn--outlined:focus {
-  background-color: #bababa;
-  border-color: #9a9a9a;
-}
-
-.btn--outlined:active {
-  background-color: #adadad;
-  border-color: #c0c0c0;
-}
-
-.outlined--primary {
-  border: 1px solid #3c528c;
-  color: #3c528c;
-}
-
-.outlined--primary:hover {
-  background-color: #eaeef6;
-}
-
-.outlined--primary:focus {
-  background-color: #d9dfef;
-}
-
-.outlined--primary:active {
-  background-color: #c7d0e7;
-}
-
-/** 
- * Outlined Buttons
- */
-.btn--text:hover {
-  background-color: #c7c7c7;
-}
-
-.btn--text:focus {
-  background-color: #bababa;
-}
-
-.btn--text:active {
-  background-color: #adadad;
-}
-
-.text--primary {
-  color: #3c528c;
-}
-
-.text--primary:hover {
-  background-color: #eaeef6;
-}
-
-.text--primary:focus {
-  background-color: #d9dfef;
-}
-
-.text--primary:active {
-  background-color: #c7d0e7;
-}
-
-/** 
- * Floating action button
- */
-.btn--fab {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-}
-
-.btn--rounded {
-  border-radius: 50px;
-}
-
-/* Call to action link */
-.cta {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  line-height: 1.7;
-  padding: 8px 16px;
-  border: 1px solid var(--color-mid);
-  background-color: transparent;
-  font-family: var(--font-special);
-  font-size: inherit;
-  font-weight: 700;
-  color: var(--color-darkish);
-  text-transform: uppercase;
-  cursor: pointer;
+.cta:active {
+  background-color: #000034;
+  border-color: #000034;
+  color: #fff;
 }
 
 .cta--link {
   text-decoration: none;
 }
 
-.cta:hover {
-  background-color: var(--color-p);
-  color: var(--color-light);
+.cta--block {
+  display: block;
+}
+
+[disabled] {
+  color: #9d9d9d;
+  border-color: #9d9d9d;
+  cursor: default;
+  pointer-events: none;
+}
+
+[disabled]:hover, [disabled]:focus, [disabled]:active {
+  background: transparent;
+}
+
+.cta--s {
+  background-color: #ffca00;
+  color: #000;
+  border-color: #ffca00;
+}
+
+.cta--s:hover, .cta--s:focus, .cta--s:active {
+  background-color: #c79a00;
+  border-color: #c79a00;
+  color: #000;
+}
+
+/** 
+ * Outlined Buttons
+ */
+.cta--txt {
+  border: none;
+  background-color: transparent;
+  color: #757575;
+}
+
+.cta--txt:hover {
+  background-color: #3c528c;
+}
+
+.cta--txt:focus {
+  background-color: #002a5e;
+}
+
+.cta--txt:active {
+  background-color: #000034;
+}
+
+.cta-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+/**
+ * Group that has space in between
+ */
+.cta-group--gap {
+  margin: -1.7rem;
+}
+
+.cta-group--gap > .cta {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  margin: 1.7rem;
 }
 
 /**
